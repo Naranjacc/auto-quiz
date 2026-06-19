@@ -44,7 +44,7 @@
 ### 2. 安装
 
 ```bash
-git clone https://github.com/your-username/auto-quiz.git
+git clone https://github.com/Naranjacc/auto-quiz.git
 cd auto-quiz
 npm install
 
@@ -300,4 +300,4 @@ MIT — 随意使用、修改、分发。
 
 ---
 
-🤖 本项目开发由 [Musk PM 模式](https://github.com/your-username/auto-quiz/blob/master/CLAUDE.md) 驱动 —— 6 阶段编排，零容忍冗余。
+🤖 本项目开发由 [Musk PM 模式](https://github.com/Naranjacc/auto-quiz/blob/master/CLAUDE.md) 驱动 —— 6 阶段编排，零容忍冗余。
