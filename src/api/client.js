@@ -16,6 +16,10 @@
  * @module api/client
  */
 
+// WeChat App ID from the quiz platform (not a secret — public identifier for OAuth)
+// Override via WECHAT_APPID env var if needed
+const WECHAT_APPID = process.env.WECHAT_APPID || 'wx473d4078f39e86d8';
+
 import crypto from 'node:crypto';
 
 // ---------------------------------------------------------------------------
@@ -237,7 +241,7 @@ export function createApiClient(opts) {
    * @returns {Promise<{openId: string, visitorId: number}>}
    */
   async function getVisitor(code) {
-    const url = `${baseUrl}/wechat/getVisitor?appId=wx473d4078f39e86d8&code=${encodeURIComponent(code)}&actCode=${secretBoxCode}&desc=box`;
+    const url = `${baseUrl}/wechat/getVisitor?appId=${WECHAT_APPID}&code=${encodeURIComponent(code)}&actCode=${secretBoxCode}&desc=box`;
     const res = await fetch(url, {
       headers: {
         'X-Requested-With': 'XMLHttpRequest',
