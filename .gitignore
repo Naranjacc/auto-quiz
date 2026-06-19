@@ -1,0 +1,10 @@
+node_modules/
+.claude/
+data/*.png
+data/*.jpg
+data/*.docx
+data/kb/*.json
+data/kb/_test/
+~/.auto-quiz/
+*.log
+.env
