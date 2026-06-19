@@ -16,9 +16,8 @@
  * @module api/client
  */
 
-// WeChat App ID from the quiz platform (not a secret — public identifier for OAuth)
-// Override via WECHAT_APPID env var if needed
-const WECHAT_APPID = process.env.WECHAT_APPID || 'wx473d4078f39e86d8';
+// WeChat App ID — 通过环境变量 WECHAT_APPID 设置，或写入 ~/.auto-quiz.json
+const WECHAT_APPID = process.env.WECHAT_APPID || '';
 
 import crypto from 'node:crypto';
 
