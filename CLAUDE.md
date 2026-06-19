@@ -35,6 +35,15 @@ data/kb/                 ← 你的题库（JSON 格式，自行上传）
 watch.cjs                ← 一键答题脚本
 ```
 
+## 已知踩坑记录（别重犯）
+
+| 问题 | 教训 |
+|------|------|
+| 微信 App ID 硬编码在 `client.js` | 所有第三方 ID → `process.env.XXX \|\| ''` |
+| 396 条题库直接提交 | `data/kb/*.json` 进 `.gitignore`，只留 `.gitkeep` |
+| API 变更后测试挂了 | `add()` 返回 string 不是 object，改完代码必须跑 `npm test` |
+| GitHub push 前没扫敏感信息 | push 前 `grep` 扫 `ghp_`/`sk-`/App ID |
+
 ## 当前优先级
 
 1. [P0] E2E 验证 KB 匹配准确率
